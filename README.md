@@ -1,12 +1,16 @@
 # Paragliding
 
 A minimal Garmin Connect IQ watch app (Monkey C) for logging paragliding flights.
-Built for the Forerunner 965, also targeting other modern map-capable watches (e.g. Forerunner 955, epix Gen 2, fēnix 7X).
+Built for the Forerunner 965, aiming to also support other modern map-capable Garmin watches (e.g. Forerunner 955, epix Gen 2, fēnix 7X).
 
 
 ## Vision
 
-A simple flight logger with the following data screens:
+A simple flight logger with basic data screens utalising what's available through our modern Garmin watches.
+
+### Data screens
+
+Includes the following data screens:
 
 | Screen | Shows |
 | ------ | ----- |
@@ -15,20 +19,27 @@ A simple flight logger with the following data screens:
 | 3 | 2D map with GPS position and track |
 | 4 | Compass |
 
+
+### User journey
+
 Press **START** to begin recording a flight and **START** again to stop and save it.
 **UP/DOWN** switch screens. **BACK** exits the app (disabled while recording).
 Flights are saved as *Hang Gliding* activities and sync to Garmin Connect like any other activity.
 
-Stretch goal: a 3D map summary of the flight afterwards.
+### Future goals
+
+Stretch goal: adding the ability to view a 3D map summary of the flight afterwards.
 
 
-## Purpose and originality
+## Note on the project's purpose and originality
 
 This is a personal project: a free app built for my own flights, and practice in writing software across platforms and programming languages.
-If other pilots find it useful, it may be shared for free.
+If anyone else finds it useful, they are free to use it or build on top of it for free.
 
-Other paragliding and vario apps exist in the Connect IQ Store (some free, some paid).
-the functionality in this app is not necessarily unique, but the project is written from scratch using Garmin's public Connect IQ SDK and its documentation.
+Other paragliding and vario apps already exist in the Connect IQ Store (some free, some paid).
+This app is not necessarily better than existing apps or trying to be; it has been created from scratch out of personal interest in the development process and to play around with data and try different setups.
+
+The project code is written from scratch using Garmin's public Connect IQ SDK and its [documentation](https://developer.garmin.com/connect-iq/monkey-c/).
 
 
 ## Project layout
@@ -45,7 +56,8 @@ source/ParaglidingView.mc     Drawing of the data screens
 
 ## 1. Prepare the development environment
 
-1. Install [Visual Studio Code](https://code.visualstudio.com/) (Monkey C, the programming language for Garmin apps, is best supported in VS Code through plugins).
+1. Install [Visual Studio Code](https://code.visualstudio.com/)
+   > Note on the use of VS Code: Monkey C, the programming language for Garmin apps, is best supported in VS Code because Garmin only maintains a VS Code extension for the language.
 2. Download and run the **Connect IQ SDK Manager** from the [Garmin developer site](https://developer.garmin.com/connect-iq/sdk/).
    - Sign in with a Garmin account.
    - Download the latest SDK and set it as active.
